@@ -1,0 +1,1138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+/* =========================================================
+   ALAP
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    color: #e2e8f0;
+    background-image: url('imgs/fe98002b-2c3a-4ca9-ad5a-ef7806a2665e.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.6;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(5, 12, 9, 0.38);
+    z-index: -1;
+    pointer-events: none;
+}
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0f172a;
+    color: #ffffff;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    background: rgba(15, 23, 42, 0.88);
+    backdrop-filter: blur(15px);
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.logo-text {
+    color: #ffffff;
+    font-size: 1.25rem;
+    font-weight: 600;
+    cursor: default;
+    user-select: none;
+    transform: translateY(-2px);
+}
+
+.main-content {
+    padding-top: 120px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+.contact-card {
+    background: rgba(30, 41, 59, 0.85);
+    padding: 30px;
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+}
+
+.info-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.icon {
+    color: #2ec4b6;
+}
+
+.address-link, .phone-link {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.click-hint {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #2ec4b6;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.arrow-icon {
+    animation: bounceLeft 1.2s infinite alternate;
+}
+
+@keyframes bounceLeft {
+    from { transform: translateX(0); }
+    to { transform: translateX(5px); }
+}
+main {
+    flex: 1;
+}
+
+/* =========================================================
+   FEJLÉC
+   ========================================================= */
+
+
+/* Logo elrendezése és méretezése */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 30px;
+    background: rgba(15, 23, 42, 0.88);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 10000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-img {
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+}
+
+.logo-text {
+    color: #ffffff;
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: default;
+    user-select: none;
+    line-height: 1;
+    transform: translateY(-2px);
+}
+.logo a {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Távolság a logó kép és a szöveg között */
+    text-decoration: none;
+}
+
+
+
+
+.logo-img:hover {
+    transform: scale(1.08); /* Enyhe kiemelés rámutatáskor */
+}
+/* =========================================================
+   MENÜ GOMB
+   ========================================================= */
+
+.menu-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    background: #233d34;
+    color: #ffffff;
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+
+    padding: 10px 20px;
+
+    font-size: 1rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
+
+    transition: all 0.3s ease;
+}
+
+.menu-btn:hover {
+    background: #2e5347;
+    transform: translateY(-2px);
+    box-shadow: 0 7px 22px rgba(46, 196, 182, 0.2);
+}
+
+.menu-btn i {
+    font-size: 1.1rem;
+}
+
+/* =========================================================
+   TELJES KÉPERNYŐS MENÜ
+   ========================================================= */
+.nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    /* Háttérkép beállítása sötétítő réteggel */
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), 
+                url('imgs/fe98002b-2c3a-4ca9-ad5a-ef7806a2665e.png') no-repeat center center/cover;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+/* Amikor a menü aktív/nyitva van */
+.nav-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+.nav-links {
+    list-style: none;
+    text-align: center;
+}
+
+.nav-links li {
+    margin: 22px 0;
+
+    opacity: 0;
+    transform: translateY(25px);
+
+    transition:
+        opacity 0.45s ease,
+        transform 0.45s ease;
+}
+
+.nav-overlay.active .nav-links li {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.nav-overlay.active .nav-links li:nth-child(1) {
+    transition-delay: 0.05s;
+}
+
+.nav-overlay.active .nav-links li:nth-child(2) {
+    transition-delay: 0.10s;
+}
+
+.nav-overlay.active .nav-links li:nth-child(3) {
+    transition-delay: 0.15s;
+}
+
+.nav-overlay.active .nav-links li:nth-child(4) {
+    transition-delay: 0.20s;
+}
+
+.nav-overlay.active .nav-links li:nth-child(5) {
+    transition-delay: 0.25s;
+}
+
+.nav-links a {
+    position: relative;
+
+    display: inline-block;
+
+    padding: 12px 30px;
+
+    color: #f8fafc;
+    text-decoration: none;
+
+    font-size: 2rem;
+    font-weight: 700;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.nav-links a::before {
+    content: "";
+
+    position: absolute;
+    inset: -100%;
+
+    background: conic-gradient(
+        transparent,
+        transparent,
+        transparent,
+        #2ec4b6
+    );
+
+    animation: rotateAround 3s linear infinite;
+
+    z-index: -2;
+}
+
+.nav-links a::after {
+    content: "";
+
+    position: absolute;
+    inset: 3px;
+
+    background: rgba(15, 23, 42, 0.97);
+
+    border-radius: 10px;
+
+    z-index: -1;
+}
+
+.nav-links a:hover {
+    color: #2ec4b6;
+    transform: scale(1.05);
+}
+
+@keyframes rotateAround {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* =========================================================
+   ÁLTALÁNOS SZEKCIÓ
+   ========================================================= */
+
+.section {
+    padding: 130px 20px 70px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+/* =========================================================
+   FŐOLDAL
+   ========================================================= */
+
+.hero {
+    min-height: calc(100vh - 80px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero .container {
+    max-width: 850px;
+
+    padding: 45px 35px;
+
+    background: rgba(15, 23, 42, 0.68);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 22px;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+}
+
+.hero h2 {
+    color: #2ec4b6;
+
+    font-size: 2.3rem;
+    line-height: 1.3;
+
+    margin-bottom: 15px;
+
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+}
+
+.hero p {
+    color: #f1f5f9;
+    font-size: 1.1rem;
+}
+
+/* =========================================================
+   OLDAL CÍMEK
+   ========================================================= */
+
+.page-title {
+    color: #2ec4b6;
+    font-size: 2.5rem;
+    margin-bottom: 12px;
+
+    text-shadow: 0 0 15px rgba(46, 196, 182, 0.25);
+}
+
+.page-description {
+    color: #cbd5e1;
+    margin-bottom: 30px;
+}
+
+/* =========================================================
+   KÁRTYÁK
+   ========================================================= */
+
+.price-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+
+    margin-top: 30px;
+}
+
+.card {
+    width: 300px;
+
+    padding: 30px;
+
+    background: rgba(30, 41, 59, 0.76);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    border-color: #2ec4b6;
+}
+
+.card h3 {
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #cbd5e1;
+}
+
+.price {
+    color: #2ec4b6;
+
+    font-size: 1.8rem;
+    font-weight: 700;
+
+    margin: 15px 0;
+}
+
+/* =========================================================
+   FACEBOOK
+   ========================================================= */
+
+.fb-container {
+    max-width: 850px;
+    margin: 30px auto 0;
+
+    padding: 25px;
+
+    display: flex;
+    justify-content: center;
+
+    background: rgba(255, 255, 255, 0.04);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+
+    backdrop-filter: blur(8px);
+}
+
+.fb-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    padding: 12px 24px;
+
+    background: #1877f2;
+    color: #ffffff;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    font-size: 1.1rem;
+    font-weight: 600;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+
+    transition: all 0.3s ease;
+}
+
+.fb-btn:hover {
+    background: #166fe5;
+    color: #ffffff;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 6px 16px rgba(24, 119, 242, 0.4);
+}
+
+.fb-btn i {
+    font-size: 1.3rem;
+}
+
+/* =========================================================
+   GALÉRIA
+   ========================================================= */
+
+.gallery-grid {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
+    gap: 22px;
+
+    margin-top: 30px;
+}
+
+.gallery-item {
+    position: relative;
+
+    height: 330px;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(10, 15, 12, 0.85);
+
+    border: 2px solid rgba(46, 74, 54, 0.9);
+    border-radius: 14px;
+
+    cursor: pointer;
+
+    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.55);
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    border-color: #2ec4b6;
+
+    box-shadow:
+        0 10px 30px rgba(46, 196, 182, 0.3);
+
+    transform: translateY(-3px);
+}
+
+.gallery-item img,
+.gallery-item video {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img,
+.gallery-item:hover video {
+    transform: scale(1.05);
+}
+
+/* Videó ikon */
+
+.video-card::after {
+    content: "▶";
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 70px;
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding-left: 4px;
+
+    border-radius: 50%;
+
+    background: rgba(46, 196, 182, 0.92);
+    color: white;
+
+    font-size: 30px;
+
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.7);
+
+    pointer-events: none;
+}
+
+/* =========================================================
+   LIGHTBOX
+   ========================================================= */
+
+.lightbox-overlay {
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background: rgba(5, 10, 8, 0.97);
+
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    z-index: 99999;
+}
+
+.lightbox-overlay.active {
+    display: flex;
+}
+
+.lightbox-content {
+    position: relative;
+
+    max-width: 90vw;
+    max-height: 90vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox-image,
+.lightbox-video {
+    max-width: 80vw;
+    max-height: 80vh;
+
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
+
+    border: 3px solid #2ec4b6;
+    border-radius: 10px;
+
+    background: #000;
+
+    box-shadow: 0 10px 45px rgba(0, 0, 0, 0.9);
+}
+
+/* =========================================================
+   LIGHTBOX BEZÁRÁS
+   ========================================================= */
+
+.lightbox-close {
+    position: fixed;
+
+    top: 20px;
+    right: 30px;
+
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(15, 23, 42, 0.8);
+
+    color: #2ec4b6;
+
+    font-size: 2.2rem;
+
+    cursor: pointer;
+
+    z-index: 100002;
+
+    transition: all 0.3s ease;
+}
+
+.lightbox-close:hover {
+    background: #2ec4b6;
+    color: #ffffff;
+
+    transform: scale(1.08);
+}
+
+/* =========================================================
+   LIGHTBOX NYILAK
+   ========================================================= */
+
+.lightbox-prev,
+.lightbox-next {
+    position: fixed;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 2px solid #2ec4b6;
+    border-radius: 50%;
+
+    background: rgba(10, 15, 12, 0.85);
+
+    color: #2ec4b6;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+    z-index: 100001;
+
+    transition: all 0.3s ease;
+}
+
+.lightbox-prev {
+    left: 25px;
+}
+
+.lightbox-next {
+    right: 25px;
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+    background: #2ec4b6;
+    color: white;
+
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* =========================================================
+   ELÉRHETŐSÉG
+   ========================================================= */
+
+.contact-info {
+    display: inline-block;
+
+    max-width: 700px;
+
+    padding: 30px;
+
+    background: rgba(30, 41, 59, 0.75);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+
+    backdrop-filter: blur(10px);
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.contact-info p {
+    margin: 15px 0;
+    font-size: 1.15rem;
+}
+
+.contact-info i {
+    color: #2ec4b6;
+    margin-right: 10px;
+}
+
+.map-link {
+    color: #ffffff !important;
+    text-decoration: underline;
+    transition: all 0.3s ease;
+}
+
+.map-link:hover {
+    color: #2ec4b6 !important;
+}
+
+.phone-link {
+    color: #e2e8f0;
+    text-decoration: none;
+}
+
+.phone-link:hover {
+    color: #2ec4b6;
+}
+
+/* =========================================================
+   LÁBLÉC
+   ========================================================= */
+
+footer {
+    margin-top: 40px;
+
+    padding: 25px;
+
+    text-align: center;
+
+    background: rgba(15, 23, 42, 0.92);
+
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+
+    color: #94a3b8;
+
+    font-size: 0.9rem;
+}
+
+/* =========================================================
+   MOBIL
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .header {
+        min-height: 68px;
+        padding: 10px 15px;
+    }
+
+    .logo a {
+        font-size: 0.95rem;
+    }
+
+    .menu-btn {
+        padding: 9px 14px;
+    }
+
+    .section {
+        padding: 110px 15px 50px;
+    }
+
+    .hero {
+        min-height: calc(100vh - 70px);
+    }
+
+    .hero .container {
+        padding: 30px 20px;
+    }
+
+    .hero h2 {
+        font-size: 1.65rem;
+    }
+
+    .page-title {
+        font-size: 2rem;
+    }
+
+    .nav-links a {
+        font-size: 1.55rem;
+        padding: 10px 20px;
+    }
+
+    .nav-links li {
+        margin: 16px 0;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .gallery-item {
+        height: 280px;
+    }
+
+    .lightbox-image,
+    .lightbox-video {
+        max-width: 88vw;
+        max-height: 72vh;
+    }
+
+    .lightbox-prev,
+    .lightbox-next {
+        width: 48px;
+        height: 48px;
+
+        font-size: 20px;
+    }
+
+    .lightbox-prev {
+        left: 8px;
+    }
+
+    .lightbox-next {
+        right: 8px;
+    }
+
+    .lightbox-close {
+        top: 15px;
+        right: 15px;
+
+        width: 48px;
+        height: 48px;
+
+        font-size: 1.8rem;
+    }
+
+    .contact-info {
+        width: 100%;
+        padding: 22px 18px;
+    }
+}
+/* Mobil képernyőkre szabott igazítások */
+@media (max-width: 600px) {
+    .contact-card {
+        padding: 20px 15px;
+        margin: 0 10px;
+        width: calc(100% - 20px);
+        box-sizing: border-box;
+    }
+
+    .info-row {
+        /* Megtartja az egymás alatti sorokat, de nem tör be kényelmetlenül */
+        flex-wrap: wrap; 
+        gap: 6px 10px;
+        font-size: 0.95rem; /* Kicsit kisebb betűméret, hogy elférjen egy sorban */
+    }
+
+    .click-hint {
+        font-size: 0.85rem;
+        margin-left: 0;
+    }
+}
+/* Lightbox stílusok */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox-content {
+    max-width: 85%;
+    max-height: 80vh;
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
+    object-fit: contain;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.lightbox-close:hover {
+    color: #2ec4b6;
+}
+
+.lightbox-prev, .lightbox-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(15, 23, 42, 0.7);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 24px;
+    padding: 15px 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.lightbox-prev:hover, .lightbox-next:hover {
+    background: #2ec4b6;
+    color: #0f172a;
+}
+
+.lightbox-prev { left: 20px; }
+.lightbox-next { right: 20px; }
+/* Windows stílusú naptár */
+.win-calendar {
+    background: #1e1e1e;
+    border: 1px solid #333333;
+    border-radius: 12px;
+    padding: 20px;
+    max-width: 380px;
+    margin: 0 auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    font-family: 'Poppins', sans-serif;
+}
+
+.win-calendar-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #ffffff;
+    text-align: left;
+    margin-bottom: 15px;
+    padding-left: 5px;
+}
+
+.win-calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+    text-align: center;
+}
+
+.win-day-head {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #ffffff;
+    padding: 8px 0;
+}
+
+.win-day {
+    font-size: 0.95rem;
+    color: #ffffff;
+    padding: 10px 0;
+    border-radius: 4px;
+    border: 2px solid transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Előző és következő hónap napjai */
+.win-day.other-month {
+    color: #555555;
+}
+
+/* Mai nap - Kék keret a képed alapján */
+.win-day.today {
+    border: 2px solid #0078d4;
+    background-color: #0078d4;
+    font-weight: 700;
+}
+
+/* Nyitvatartási napok - Türkiz szegély és finom háttér */
+.win-day.open {
+    border-color: #2ec4b6;
+    background: rgba(46, 196, 182, 0.15);
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* Augusztus 20 ünnepi kiemelés */
+.win-day.open.holiday {
+    background: #2ec4b6;
+    color: #0f172a;
+    font-weight: 700;
+}
+
+/* Jelmagyarázat */
+.win-legend {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #333333;
+    font-size: 0.8rem;
+    color: #cccccc;
+}
+
+.open-icon { color: #2ec4b6; }
+.today-icon { color: #0078d4; }

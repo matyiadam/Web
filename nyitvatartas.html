@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nyitvatartás - Edelényi I-számú kavicsbányató</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+  <header class="header">
+        <h1 class="logo">
+            <a href="index.html">
+                <img src="imgs/492334550_3903755023210447_3029243163798136495_n.jpg" alt="Logo" class="logo-img">
+                <span class="logo-text">Nyitvatartás</span>
+            </a>
+        </h1>
+        <button class="menu-btn" id="menuBtn" aria-label="Menü megnyitása">
+            <i class="fas fa-bars"></i>
+        </button>
+    </header>
+
+    <nav class="nav-overlay" id="navOverlay">
+        <div class="nav-content">
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-item">Főoldal</a></li>
+                <li><a href="araink.html" class="nav-item">Áraink</a></li>
+                <li><a href="nyitvatartas.html" class="nav-item">Nyitvatartás</a></li>
+                <li><a href="facebook.html" class="nav-item">Facebook</a></li>
+                <li><a href="galeria.html" class="nav-item">Galéria</a></li>
+                <li><a href="kapcsolat.html" class="nav-item">Elérhetőség</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="section">
+        <div class="container">
+            <h2>Nyitvatartás</h2>
+            <p style="margin-bottom: 25px;">Általános nyitvatartás: Péntek – Vasárnap (06:00 – 18:00)</p>
+
+            <div class="win-calendar">
+                <div class="win-calendar-title">2026. Augusztus</div>
+                
+                <div class="win-calendar-grid">
+                    <!-- Napok nevei -->
+                    <div class="win-day-head">H</div>
+                    <div class="win-day-head">K</div>
+                    <div class="win-day-head">Sze</div>
+                    <div class="win-day-head">Cs</div>
+                    <div class="win-day-head">P</div>
+                    <div class="win-day-head">Szo</div>
+                    <div class="win-day-head">V</div>
+
+                    <!-- Előző hónap (Július) napjai -->
+                    <div class="win-day other-month">27</div>
+                    <div class="win-day other-month">28</div>
+                    <div class="win-day other-month">29</div>
+                    <div class="win-day other-month">30</div>
+                    <div class="win-day other-month">31</div>
+
+                    <!-- Augusztus napjai -->
+                    <div class="win-day open">1</div>
+                    <div class="win-day open">2</div>
+
+                    <div class="win-day">3</div>
+                    <div class="win-day">4</div>
+                    <div class="win-day">5</div>
+                    <div class="win-day">6</div>
+                    <div class="win-day open">7</div>
+                    <div class="win-day open">8</div>
+                    <div class="win-day open">9</div>
+
+                    <div class="win-day">10</div>
+                    <div class="win-day">11</div>
+                    <div class="win-day">12</div>
+                    <div class="win-day">13</div>
+                    <div class="win-day open">14</div>
+                    <div class="win-day open">15</div>
+                    <div class="win-day open">16</div>
+
+                    <!-- Mai nap (kék keret) -->
+                    <div class="win-day today">17</div>
+                    <div class="win-day">18</div>
+                    <div class="win-day">19</div>
+                    <!-- Ünnepi nyitvatartás (Aug 20.) -->
+                    <div class="win-day open holiday">20</div>
+                    <div class="win-day open">21</div>
+                    <div class="win-day open">22</div>
+                    <div class="win-day open">23</div>
+
+                    <div class="win-day">24</div>
+                    <div class="win-day">25</div>
+                    <div class="win-day">26</div>
+                    <div class="win-day">27</div>
+                    <div class="win-day open">28</div>
+                    <div class="win-day open">29</div>
+                    <div class="win-day open">30</div>
+
+                    <div class="win-day">31</div>
+
+                    <!-- Következő hónap (Szeptember) napjai -->
+                    <div class="win-day other-month">1</div>
+                    <div class="win-day other-month">2</div>
+                    <div class="win-day other-month">3</div>
+                    <div class="win-day open other-month">4</div>
+                    <div class="win-day open other-month">5</div>
+                    <div class="win-day open other-month">6</div>
+                </div>
+
+                <div class="win-legend">
+                    <span><i class="fas fa-square open-icon"></i> Nyitva (06:00 - 18:00)</span>
+                    <span><i class="fas fa-square today-icon"></i> Mai nap</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
